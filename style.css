@@ -1,0 +1,240 @@
+
+/* ESTILO GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #f0f3f8;
+    color: #263238;
+    text-align: center;
+}
+
+/* TITULO PRINCIPAL */
+h1 {
+    color: #183153;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+h2 {
+    color: #284b75;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* CONTENEDORES PRINCIPALES */
+body > div {
+    background: white;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* BOTONES PRINCIPALES */
+.botonesPrincipales {
+    background: #2459a9;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botonesPrincipales:hover {
+    background: #183d78;
+    transform: translateY(-2px);
+}
+
+/* BOTON VOLVER */
+#botonVolver {
+    background: #e0e7f0;
+    color: #183153;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+}
+
+#botonVolver:hover {
+    background: #c8d5e6;
+}
+
+/* FORMULARIOS */
+#conductor,
+#vehiculo,
+#datos {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#conductor h1,
+#vehiculo h1,
+#datos h1 {
+    color: #2459a9;
+    border-bottom: 2px solid #dce5f1;
+    padding-bottom: 15px;
+}
+
+/* CAMPOS DE TEXTO Y SELECTORES */
+input,
+select {
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: #ffffff;
+    color: #263238;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2459a9;
+    box-shadow: 0 0 5px rgba(36, 89, 169, 0.25);
+}
+
+/* BOTONES DE LOS FORMULARIOS */
+button:not(.botonesPrincipales) {
+    background: #168568;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    margin: 8px 4px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:not(.botonesPrincipales):hover {
+    background: #10664f;
+}
+
+/* BOTONES BORRAR TODO */
+#conductor button:nth-of-type(2),
+#vehiculo button:nth-of-type(2) {
+    background: #d94343;
+}
+
+#conductor button:nth-of-type(2):hover,
+#vehiculo button:nth-of-type(2):hover {
+    background: #aa2929;
+}
+
+/* BOTONES DE FILTROS */
+#filtros {
+    margin: 20px 0;
+    padding: 15px;
+    background: #edf2f8;
+    border-radius: 10px;
+}
+
+#filtros button {
+    background: #2459a9;
+    min-width: 65px;
+}
+
+#filtros button:hover {
+    background: #183d78;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ENCABEZADOS */
+th {
+    background: #2459a9;
+    color: white;
+    padding: 14px 10px;
+    font-size: 15px;
+}
+
+/* CELDAS */
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e1e7ef;
+    font-size: 14px;
+}
+
+/* FILAS ALTERNADAS */
+tbody tr:nth-child(even) {
+    background: #f3f6fb;
+}
+
+/* EFECTO AL PASAR POR LAS FILAS */
+tbody tr:hover {
+    background: #e4edf9;
+}
+
+/* ADAPTACION A CELULARES */
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    body > div,
+    #conductor,
+    #vehiculo,
+    #datos {
+        padding: 15px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin: 7px 0;
+    }
+
+    .botonesPrincipales {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    #botonVolver {
+        position: static;
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #filtros button {
+        margin: 5px;
+    }
+}
